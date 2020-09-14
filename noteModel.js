@@ -1,13 +1,7 @@
 class Note {
 
-    constructor() {
-      this.noteList = []
-      this.text
+    constructor(text) {
+      this.text = text
     }
 
-    createNote(text) {
-       this.text = text
-       return this.noteList.push(text)
-    }
-    
 }
