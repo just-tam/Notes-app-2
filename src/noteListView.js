@@ -6,10 +6,10 @@ class NoteListView {
     }
 
     showList() {
-        for (var n = 0; n < this.noteArray.length; n++) {
-            return "<ul><li><div>" + this.noteArray[n] + "</div></li></ul>"
-        }
-        
+
+        var arrlist = this.noteArray.map(note => "<ul><li><div>" + note.substring(0, 20) + "</div></li></ul>");
+        return arrlist
+
     }
 
 }
