@@ -4,14 +4,10 @@ class NoteList {
         this.noteList = []
     };
 
-    addNoteToList() {
-        this.noteList.push(this.note)
-    };
-
     allNotes() {
-        this.noteList.forEach(function(notes) {
-            console.log(notes)
-        });
+        for (var n = 0; n < this.noteList.length; n++) {
+            return this.noteList[n];
+        }
     };
 
     createNote(text) {

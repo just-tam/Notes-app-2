@@ -1,10 +1,8 @@
 
-function testingNotesHtml() {
-    var view = new NoteListView();
-    view.noteList.createNote("test text")
-    assert.toEqual(view.showList() === "<div>test text</div>")
+function canReturnATextNoteWithHtml() {
+    var noteView = new NoteListView();
+    noteView.noteList.createNote("test text")
+    expect.toEqual(noteView.showList() === "<ul><li><div>test text</div></li></ul>")
 }
-testingNotesHtml()
 
-
-
+canReturnATextNoteWithHtml()
