@@ -1,7 +1,7 @@
 function testingNewNotesAddedToList() {
     var noteList = new NoteList();
     noteList.createNote("test text")
-    expect.toEqual(noteList.noteList[0] === "test text")
+    expect.toEqual(noteList.noteList[0].note === "test text")
 }
 testingNewNotesAddedToList()
 
@@ -13,7 +13,3 @@ function testingReturnsAllNotes() {
 }
 
 testingReturnsAllNotes()
-
-
-
-

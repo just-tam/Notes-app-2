@@ -4,17 +4,26 @@ class NoteController {
 
     constructor() {
         this.noteList = new NoteListView()
-        this.noteList.noteList.createNote("Favourite drink: seltzer")
-        this.show = this.noteList.showList()
     }
 
     updateList() {
-       return document.getElementById("app").innerHTML = this.show;
+        return document.getElementById("app").innerHTML = this.show();
+    }
+
+    createNewNote(note) {
+        this.noteList.noteList.createNote(note);
+    }
+
+    getSingleNote(id) {
+        return this.noteList.noteArray[id].note;
+    }
+
+    show() {
+        return this.noteList.showList();
     }
 
 }
 
-var notes = new NoteController()
-notes.updateList()
-
-
+var notes = new NoteController();
+notes.createNewNote("This is a note");
+notes.updateList();

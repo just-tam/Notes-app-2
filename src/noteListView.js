@@ -7,9 +7,16 @@ class NoteListView {
 
     showList() {
 
-        var arrlist = this.noteArray.map(note => "<ul><li><div>" + note.substring(0, 20) + "</div></li></ul>");
+        var arrlist = this.noteArray.map(note => "<ul><li><div>" + note.note.substring(0, 20) + "</div></li></ul>");
         return arrlist
 
+    }
+
+    htmlNote() {
+        var singlenote = this.noteList.noteList;
+        for (var i = 0; i < singlenote.length; i++) {
+            return "id='notes/" + singlenote[i].id + "' href='#notes/" + singlenote[i].id + "'"
+        }
     }
 
 }
