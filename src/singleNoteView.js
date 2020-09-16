@@ -3,8 +3,9 @@ class SingleNoteView {
         this.singleNote = singleNote;
     }
 
-    showNote() {
-        return "<div>" + this.note.text + "</div>"
+    twentyChar(text) {
+        var dots = text.length > 20 ? "..." : "";
+        return (text.substring(0, 20) + dots);
     }
 
     htmlNote() {

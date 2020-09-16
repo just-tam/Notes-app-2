@@ -1,6 +1,6 @@
-function canReturnASingleNote() {
-    var testnote = new SingleNoteView("test");
-    expect.toEqual(testnote.showNote() === "<div>test</div>")
+function canReturnASingleNoteOfTwentyCharacters() {
+    var testnote = new SingleNoteView();
+    expect.toEqual(testnote.twentyChar("This is a really no big long test note") === "This is a really no ...")
 }
 
-canReturnASingleNote()
+canReturnASingleNoteOfTwentyCharacters()

@@ -19,7 +19,7 @@ class NoteListView {
     }
 
     listHtml() {
-        return ("<ul id='myUL'>" + this.listElementHtml() + "</ul>");
+        return ("<ul id='list'>" + this.listElementHtml() + "</ul>");
     }
 
     // htmlNote() {
