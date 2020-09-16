@@ -1,19 +1,20 @@
 class NoteList {
 
     constructor() {
-        this.noteList = []
+        this.noteArray = []
         this.id = 0;
     };
 
     allNotes() {
-        for (var n = 0; n < this.noteList.length; n++) {
-            return this.noteList[n].note;
+        for (var n = 0; n < this.noteArray.length; n++) {
+            return this.noteArray[n].note;
         }
     };
 
-    createNote(text) {
-        var note = { note: new Note(text).text, id: this.id++ }
-        return this.noteList.push(note)
+    storeNote(text) {
+        var note = { note: text, id: this.id++ }
+        this.noteArray.push(note)
+        return note;
     };
 
 }

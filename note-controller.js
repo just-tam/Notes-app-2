@@ -2,32 +2,34 @@
 
 class NoteController {
 
-    constructor() {
-        this.noteList = new NoteListView()
+    constructor(noteList, noteListView) {
+        this.noteList = new NoteList();
+        this.noteListView = new NoteListView(this.noteList);
+    }
+
+    updateHtml() {
+        var joiner = this.noteListView.listHtml();
+        return joiner;
     }
 
     updateList() {
-        return document.getElementById("app").innerHTML = this.link() + this.show() + "</a>";
+        return document.getElementById("app").innerHTML = this.updateHtml();
     }
 
     createNewNote(note) {
-        this.noteList.noteList.createNote(note);
+        this.noteList.storeNote(note);
     }
 
     getSingleNote(id) {
-        return this.noteList.noteArray[id].note;
-    }
-
-    show() {
-        return this.noteList.showList();
-    }
-
-    link() {
-        return this.noteList.htmlNote();
+        var note = this.noteList.noteArray[id].note;
+        return note;
     }
 
 }
 
 var notes = new NoteController();
 notes.createNewNote("This is a note");
+notes.createNewNote("This is a note 2");
+notes.createNewNote("This is a note 3");
+notes.updateHtml();
 notes.updateList();
