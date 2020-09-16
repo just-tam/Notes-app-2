@@ -7,7 +7,7 @@ class NoteController {
     }
 
     updateList() {
-        return document.getElementById("app").innerHTML = this.show();
+        return document.getElementById("app").innerHTML = this.link() + this.show() + "</a>";
     }
 
     createNewNote(note) {
@@ -20,6 +20,10 @@ class NoteController {
 
     show() {
         return this.noteList.showList();
+    }
+
+    link() {
+        return this.noteList.htmlNote();
     }
 
 }

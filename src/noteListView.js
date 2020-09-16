@@ -15,7 +15,7 @@ class NoteListView {
     htmlNote() {
         var singlenote = this.noteList.noteList;
         for (var i = 0; i < singlenote.length; i++) {
-            return "id='notes/" + singlenote[i].id + "' href='#notes/" + singlenote[i].id + "'"
+            return "<a id='notes/" + singlenote[i].id + "' href='#notes/" + singlenote[i].id + "'>"
         }
     }
 
