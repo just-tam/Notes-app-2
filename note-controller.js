@@ -20,14 +20,15 @@ class NoteController {
 
     getSingleNote(id) {
         var note = this.noteList.noteArray[id].note;
-        return note;
+        var textNote = document.getElementById('singlenote')
+        textNote.innerHTML = note;
     }
 
 }
 
-var notes = new NoteController();
-notes.createNewNote("This is a note");
-notes.createNewNote("This is a note 2");
-notes.createNewNote("This is a note much longer 3");
-notes.updateHtml();
-notes.updateList();
+// var notes = new NoteController();
+// notes.createNewNote("This is a note");
+// notes.createNewNote("This is a note 2");
+// notes.createNewNote("This is a note much longer 3");
+// notes.updateHtml();
+// notes.updateList();

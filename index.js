@@ -2,29 +2,40 @@ var noteController = new NoteController();
 
 window.onload = function() {
 
-    makeUrlChangeNoteForCurrentPage();
+    var form = document.getElementById('text');
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        var noteinput = document.getElementById('newnote').value;
+        noteController.createNewNote(noteinput);
+        noteController.updateList();
 
-    function makeUrlChangeNoteForCurrentPage() {
-        window.addEventListener("hashchange", showNoteForCurrentPage);
-    };
+        document.getElementById('newnote').value = "";
 
-    function showNoteForCurrentPage() {
-        showNote(getNoteFromUrl(window.location));
-    };
+    });
 
-    function getNoteFromUrl(location) {
-        return location.hash.split("#")[1][6];
-    };
+    // makeUrlChangeNoteForCurrentPage();
 
-    function showNote(note) {
-        for (var i = 0; i < notes.noteList.noteArray.length; i++) {
-            if (notes.noteList.noteArray[i].id == getNoteFromUrl(location)) {
-                note = notes.noteList.noteArray[i].note
-            }
-        }
-        document
-            .getElementById("singlenote")
-            .innerHTML = note;
-    };
+    // function makeUrlChangeNoteForCurrentPage() {
+    //     window.addEventListener("hashchange", showNoteForCurrentPage);
+    // };
+
+    // function showNoteForCurrentPage() {
+    //     showNote(getNoteFromUrl(window.location));
+    // };
+
+    // function getNoteFromUrl(location) {
+    //     return location.hash.split("#")[1][6];
+    // };
+
+    // function showNote(note) {
+    //     for (var i = 0; i < notes.noteList.noteArray.length; i++) {
+    //         if (notes.noteList.noteArray[i].id == getNoteFromUrl(location)) {
+    //             note = notes.noteList.noteArray[i].note
+    //         }
+    //     }
+    //     document
+    //         .getElementById("singlenote")
+    //         .innerHTML = note;
+    // };
 
 };
