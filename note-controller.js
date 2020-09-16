@@ -1,5 +1,3 @@
-//document.getElementById("app").innerHTML = "howdy"
-
 class NoteController {
 
     constructor(noteList, noteListView) {
@@ -30,6 +28,6 @@ class NoteController {
 var notes = new NoteController();
 notes.createNewNote("This is a note");
 notes.createNewNote("This is a note 2");
-notes.createNewNote("This is a note 3");
+notes.createNewNote("This is a note much longer 3");
 notes.updateHtml();
 notes.updateList();

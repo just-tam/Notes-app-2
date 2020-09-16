@@ -10,6 +10,6 @@ class SingleNoteView {
 
     htmlNote() {
         var note = this.singleNote;
-        return "<a id='notes/" + note.id + "' href='#notes/" + note.id + "'>" + note.note + "</a>";
+        return "<a id='notes/" + note.id + "' href='#notes/" + note.id + "'>" + this.twentyChar(note.note) + "</a>";
     }
 }
