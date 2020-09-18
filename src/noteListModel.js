@@ -17,4 +17,8 @@ class NoteList {
         return note;
     };
 
+    deleteNote(idx) {
+        this.noteArray.splice(idx, 1)
+    }
+
 }

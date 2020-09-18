@@ -5,19 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Runner</title>
-</head>
-
-<body>
-
-    <h1>Tests</h1>
-    <div id="app"></div>
-    <script src="ziti.js"></script>
-
     <!-- include source files here... -->
     <script src="./src/noteModel.js"></script>
     <script src="./src/noteListModel.js"></script>
     <script src="./src/noteListView.js"></script>
     <script src="./src/singleNoteView.js"></script>
+</head>
+
+<body>
+
+    <h1>Tests</h1>
+    <script src="ziti.js"></script>
+
+    <div id="app">hello</div>
+    <form id="text" method="POST" action="#">
+        <textarea rows="4" cols="50" id="newnote" form="text">Enter note here...</textarea>
+        <br><br>
+        <input type="submit">
+    </form>
+    <div id="singlenote"></div>
+
+    <script src='./index.js'></script>
     <script src="./note-controller.js"></script>
 
 

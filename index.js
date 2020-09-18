@@ -9,7 +9,9 @@ window.onload = function() {
         noteController.createNewNote(noteinput);
         noteController.updateList();
 
+        document.getElementById("app").classList.remove("hide");
         document.getElementById('newnote').value = "";
+
 
     });
 

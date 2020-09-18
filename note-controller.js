@@ -20,8 +20,15 @@ class NoteController {
 
     getSingleNote(id) {
         var note = this.noteList.noteArray[id].note;
-        var textNote = document.getElementById('singlenote')
+        var textNote = document.getElementById('singlenote');
+        textNote.classList.remove("hide");
         textNote.innerHTML = note;
+    }
+
+    deleteAllNotes() {
+        var allnotes = document.getElementById('list');
+        allnotes.remove();
+        //textNote.parentNode.removeChild(textNote);
     }
 
 }
